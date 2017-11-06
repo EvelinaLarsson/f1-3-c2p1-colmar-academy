@@ -1,0 +1,906 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Rubik Light'), local('Rubik-Light'), url(https://fonts.gstatic.com/s/rubik/v7/tRvJQnSw4lmceQIbdzOKGHYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v7/p_PvaTv0YzIEJlEVv30xK6CWcynf_cDxXwCLxiixG1c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v7/0hS39AKxpJlEXQF3mVPgrnYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Rubik";
+  color: rgb(74, 74, 74);
+}
+
+/* Navigation styling, Desktop */
+.nav {
+  background-color: white;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  flex-grow: 1;
+}
+
+.nav .brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav .brand img {
+  height: 3rem;
+  width: auto;
+  padding-left: 1.5rem;
+  padding-top: 0.3rem;
+}
+
+.nav .menu .navigation a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+  margin: 0.5rem;
+  transition: color 0ms linear 0s;
+}
+
+.nav .menu .navigation a:active {
+  color: rgb(36, 133, 242);
+}
+
+.nav .menu .navigation {
+  margin-right: 1rem;
+}
+
+.nav .name span {
+  font-size: 1.8rem;
+}
+
+.nav .name .dark {
+  color: rgb(74, 74, 74);
+  font-weight: bold;
+}
+
+.nav .name .light {
+  color: rgb(155, 155, 155);
+  font-weight: lighter;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav.tablet {
+    display: none;
+  }
+}
+
+/* Tablet navigation styling, 768px */
+
+@media only screen and (max-width: 767px) {
+  .nav.desktop .name {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .nav.mobile {
+    display: none;
+  }
+}
+
+/* Mobile navigation styling, 462px */
+
+@media only screen and (max-width: 462px) {
+  .nav.desktop {
+    display: none;
+  }
+
+  .nav.desktop .menu {
+    display: none;
+  }
+
+  .nav.mobile {
+    display: flex;
+  }
+
+  .nav.mobile .logo {
+    flex-grow: 1;
+  }
+
+  .nav.mobile .logo img {
+    height: 3rem;
+    width: auto;
+    padding-left: 24px;
+    padding-top: 0.3rem;
+  }
+
+  .nav.mobile .mobile-menu {
+    margin-right: 1.5rem;
+  }
+
+  .nav.mobile .mobile-menu a {
+    margin: 1.5rem;
+  }
+
+  .nav.mobile .mobile-menu img {
+    height: 2rem;
+    width: auto;
+    padding-top: 0.3rem;
+  }
+}
+
+/* Main header section styling */
+.top-banner {
+  display: flex;
+  background-color: rgb(216, 216, 216);
+}
+
+.column-left {
+  width: 60%;
+  padding-right: 2rem;
+}
+
+.top-image {
+  display: inline;
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+
+.top-image img {
+  margin: 2rem;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.column-right {
+  display: inline;
+  width: 40%;
+}
+
+.top-text {
+  margin-top: 30%;
+  margin-left: 4rem;
+}
+
+.main-headline {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.top-text p {
+  font-size: 2rem;
+  margin-top: 2rem;
+  line-height: 1.3;
+}
+
+.button {
+  margin-top: 4rem;
+}
+
+.button a {
+  background-color: rgb(74, 74, 74);
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem 35%;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  transition: background-color 550ms linear 0s, color 0s linear 0s;
+}
+
+.button a:hover {
+  background-color: rgb(234, 235, 237);
+}
+
+.button a:active {
+  color: rgb(36, 133, 242);
+}
+
+@media only screen and (max-width: 1393px) {
+  .top-text {
+    margin-left: 1rem;
+  }
+
+  .main-headline {
+    font-size: 2.75rem;
+  }
+
+  .top-text p {
+    font-size: 1.5rem;
+  }
+
+  .button a {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1105px) {
+  .top-text {
+    margin-left: 2.5rem;
+  }
+
+  .main-headline {
+    font-size: 2rem;
+  }
+
+  .top-text p {
+    font-size: 1.25rem;
+  }
+
+  .button a {
+    padding: 1.2rem 20%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 803px) {
+  .top-text {
+    margin-left: 1.5rem;
+  }
+
+  .main-headline {
+    font-size: 1.5rem;
+  }
+
+  .top-text p {
+    font-size: 1rem;
+  }
+
+  .button a {
+    padding: 0.8rem 20%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-left {
+    width: 100%;
+  }
+
+  .top-image {
+    width: 100%;
+  }
+
+  .top-image img {
+    margin: 0;
+  }
+
+  .column-right {
+    width: 100%;
+  }
+
+  .top-text {
+    margin-top: 5%;
+  }
+
+  .main-headline {
+    font-size: 2.75rem;
+    line-height: 1.5;
+  }
+
+  .top-text p {
+    font-size: 1.60rem;
+    margin-top: 1.25rem;
+  }
+
+  .button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 28%;
+  }
+
+  .button a {
+    background-color: rgb(155, 155, 155)
+  }
+
+}
+
+@media only screen and (max-width: 553px) {
+  .main-headline {
+    font-size: 2.2rem;
+  }
+
+  .top-text p {
+    font-size: 1.60rem;
+    line-height: 1.5;
+  }
+
+  .button {
+    width: 100%;
+    margin-left: 18%;
+  }
+
+}
+
+
+/* Second section styling; two-column class used for section 4 as well */
+.section2 {
+  display: flex;
+}
+
+/* Column 1 styling */
+.column1 {
+  width: 60%;
+  padding-right: 2rem;
+  border-right: 1px solid rgb(216, 216, 216);
+}
+
+.column1 .section-image {
+  display: inline;
+  height: auto;
+  float: left;
+  overflow: hidden;
+}
+
+.column1 .section-image img {
+  margin: 2rem;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.column1 .copy {
+  margin: 2rem;
+  float: right;
+}
+
+.column1 .copy .headline2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.column1 .copy .body2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.column1 .copy .ps1 {
+  margin-top: 3em;
+  font-size: 0.8rem;
+}
+
+/* Column 2 styling including mobile 768px */
+.column2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.column2 a {
+  text-decoration: none;
+  color: rgb(36, 133, 242);
+  padding-top: 0.75rem;
+}
+
+.column2 a:active {
+  color: rgb(74, 74,74);
+}
+
+.small img {
+  width: 35%;
+  height: auto;
+}
+
+.small.one.desktop {
+  border-bottom: 3px solid rgb(216, 216, 216);
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  transition: background-color 400ms ease-out 0s;
+}
+
+.small.one.desktop:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.small.one.desktop .one-copy {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  padding-top: 9%;
+}
+
+.small.two.desktop {
+  border-bottom: 3px solid rgb(216, 216, 216);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  transition: background-color 400ms ease-out 0s;
+}
+
+.small.two.desktop:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.small.two.desktop .two-copy {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  padding-top: 9%;
+}
+
+.small.three.desktop {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  transition: background-color 400ms ease-out 0s;
+}
+
+.small.three.desktop:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.small.three.desktop .three-copy {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  padding-top: 9%;
+}
+
+.column2 .small-headline {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.column2 .small-copy {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .small.one.mobile, .small.two.mobile, .small.three.mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .column1, .small.one.desktop, .small.two.desktop, .small.three.desktop {
+    display: none;
+  }
+
+  .column1 {
+    width: 0%;
+  }
+
+  .column2 {
+    width: 100%;
+  }
+
+  .small a {
+    padding-top: .75rem;
+  }
+
+  .small.one.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: background-color 400ms ease-out 0s;
+  }
+
+  .small.one.mobile:hover {
+    background-color: rgb(216, 216, 216);
+  }
+
+  .small.one.mobile img {
+    width: 100%;
+    height: auto;
+  }
+
+  .small.one.mobile .one-copy {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .small.one.mobile .one-copy a {
+    transition: color 0ms linear 0s;
+  }
+
+  .small.one.mobile .one-copy a:active {
+    color: rgb(74, 74, 74);
+  }
+
+  .small.two.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: background-color 400ms ease-out 0s;
+  }
+
+  .small.two.mobile:hover {
+    background-color: rgb(216, 216, 216);
+  }
+
+  .small.two.mobile img {
+    width: 100%;
+    height: auto;
+  }
+
+  .small.two.mobile .two-copy {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .small.two.mobile .two-copy a {
+    transition: color 0ms linear 0s;
+  }
+
+  .small.two.mobile .two-copy a:active {
+    color: rgb(74, 74, 74);
+  }
+
+  .small.three.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: background-color 400ms ease-out 0s;
+  }
+
+  .small.three.mobile:hover {
+    background-color: rgb(216, 216, 216);
+  }
+
+  .small.three.mobile img {
+    width: 100%;
+    height: auto;
+  }
+
+  .small.three.mobile .three-copy {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .small.three.mobile .three-copy a {
+    transition: color 0ms linear 0s;
+  }
+
+  .small.three.mobile .three-copy a:active {
+    color: rgb(74, 74, 74);
+  }
+}
+
+/* Section 3 - Courses styling */
+
+.section3 {
+  background-color: rgb(234, 235, 237);
+}
+
+.section3 .headline3 {
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.section3 .headline3 span {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.courses.desktop {
+  display: flex;
+  margin-left: 4.5rem;
+  margin-right: 6.5rem;
+}
+
+.course {
+  flex: 1;
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+.courses.desktop img {
+  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+  height: auto;
+}
+
+#course-copy {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 8rem;
+  margin-left: 1rem;
+  margin-right: -1rem;
+  padding: 1.5rem;
+  transition: background-color 800ms ease-out 0s;
+}
+
+#course-copy:hover {
+  background-color: rgb(234, 235, 237);
+}
+
+#course-copy a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+  padding-bottom: 0.5rem;
+}
+
+.courses.desktop .small-headline {
+  font-size: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.courses.desktop .small-copy {
+  color: rgb(155, 155, 155);
+  padding: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.courses.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1083px) {
+  .courses.desktop .small-copy {
+    display: none;
+  }
+
+  #course-copy {
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .section3 {
+    background-color: white;
+  }
+
+  .section3 .courses.desktop {
+    display: none;
+  }
+
+  .courses.mobile {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .courses.mobile .course-copy {
+    flex-direction: column;
+    padding-top: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    height: 3.3rem;
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+    transition: background-color 400ms linear 0s, color 0s linear 0s;
+  }
+
+  .courses.mobile .course-copy:hover {
+    background-color: rgb(234, 235, 237);
+  }
+
+  .course-copy a {
+    text-decoration: none;
+    color: rgb(74, 74, 74);
+    font-weight: 500;
+  }
+
+  .course-copy a:active {
+    color: rgb(36, 133, 242);
+  }
+
+  .course-copy span {
+    height: 3.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+
+/* Section 4 - Most of the code is taken from Section 2 */
+.headline4 {
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+}
+
+.headline4 span {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.section4 {
+  display: flex;
+}
+
+/* Column 1 styling */
+.column1b {
+  width: 60%;
+  padding-right: 2rem;
+}
+
+.column1b video {
+  display: inline;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  margin: 2rem;
+  width: 96%;
+  height: auto;
+  display: block;
+}
+
+.column1b .copy {
+  margin: 2rem;
+  float: right;
+}
+
+.column1b .copy .headline2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.column1b .copy .body2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+
+/* Column 2 styling including mobile 768px */
+.column2b {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.small img {
+  width: 35%;
+  height: auto;
+}
+
+.small.one.desktopb {
+  border-bottom: 0px;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  transition: background-color 600ms ease-out 0s;
+}
+
+.small.one.desktopb:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.small.one.desktopb .one-copy {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  padding-top: 7%;
+}
+
+.small.two.desktopb {
+  border-bottom: 0px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  transition: background-color 600ms ease-out 0s;
+}
+
+.small.two.desktopb:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.small.two.desktopb .two-copy {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 60%;
+  padding-top: 9%;
+}
+
+.column2b a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+  padding-bottom: 1rem;
+}
+
+.column2b .small-headline {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.column2b .small-copy {
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .column2b, .small.one.desktopb, .small.two.desktopb {
+    display: none;
+  }
+
+  .column1b {
+    padding-right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .column1b video {
+    margin: 0;
+    width: 100%;
+  }
+
+
+  .column1b .copy {
+    display: none;
+  }
+
+  .column2b {
+    width: 0%;
+  }
+}
+
+/* Footer desktop styling */
+footer {
+  display: flex;
+  border-top: 2px solid rgb(216, 216, 216);
+  height: 5rem;
+  font-size: 0.75rem;
+}
+
+footer .copyright {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+footer .links {
+  margin-top: 1rem;
+}
+
+footer .links a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+  margin-right: 2rem;
+}
+
+.copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 450px) {
+  footer .copyright {
+    margin-top: 3rem;
+  }
+
+  footer .links {
+    display: none;
+  }
+}
+
+/*
+Dark: #4a4a4a, rgb 74, 74, 74
+Middle: #9b9b9b, rgb 155, 155, 155
+Light: #d8d8d8, rgb 216, 216, 216
+Lighter: eaebed, rgb 234, 235 237
+Blue: #2485F2, rgb 36, 133, 242*/
